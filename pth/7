@@ -1,0 +1,7 @@
+import math
+R = int(input())
+B = []
+c = []
+B = 4/3*math.pi*(R**3)
+c = f'{B:.2f}'
+print(c)
