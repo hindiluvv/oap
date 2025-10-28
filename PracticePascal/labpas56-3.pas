@@ -14,7 +14,7 @@ begin
   for i := 1 to 20 do
     if arr[i] mod 2 = 0 then
       count := count + 1;
-      writeln('Четных чисел: ', count);8
+      writeln('Четных чисел: ', count);
       
   
   pos := 0;
@@ -36,4 +36,5 @@ begin
     for i := 1 to 21 do
       write(arr[i], ' ');
   end
+
 end.
