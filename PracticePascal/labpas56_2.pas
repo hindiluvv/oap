@@ -1,8 +1,8 @@
 ﻿var
   arr: array of integer;
   n, i, j: integer;
-  currentNumber, mostFrequent: integer;
-  currentCount, maxCount: integer;
+  cN, mF: integer;
+  cCount, mCount: integer;
 begin
 
   write('Введите размер массива: ');
@@ -17,27 +17,28 @@ begin
     readln(arr[i]);
   end;
   
-  maxCount := 0;
-  mostFrequent := arr[0];
+  mCount := 0;
+  mF := arr[0];
 
   for i := 0 to n - 1 do
   begin
-    currentNumber := arr[i];
-    currentCount := 0;
+    cN := arr[i];
+    cCount := 0;
     
     for j := 0 to n - 1 do
     begin
-      if arr[j] = currentNumber then
-        currentCount := currentCount + 1;
+      if arr[j] = cN then
+        cCount := cCount + 1;
     end;
     
-    if currentCount > maxCount then
+    if cCount > mCount then
     begin
-      maxCount := currentCount;
-      mostFrequent := currentNumber;
+      mCount := cCount;
+      mF := cN;
     end;
   end;
   
   writeln;
-  writeln('Наиболее часто повторяющееся число: ', mostFrequent);
+  writeln('Наиболее часто повторяющееся число: ', mF);
+
 end.
